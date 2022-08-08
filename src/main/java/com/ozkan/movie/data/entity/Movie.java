@@ -9,11 +9,17 @@ import java.time.LocalDate;
 public class Movie {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "movie_id")
     private int id;
+    @Column(nullable = false)
     private String name;
+    @Column(nullable = false)
     private LocalDate sceneDate;
+    @Column(nullable = false)
     private long rating;
+    @Column(nullable = false)
     private BigDecimal cost;
+    @Column(nullable = false)
     private double imdb;
 
     public Movie(int id, String name, LocalDate sceneDate, long rating, BigDecimal cost, double imdb) {

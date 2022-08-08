@@ -7,10 +7,10 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface MovieRepositoryIF extends CrudRepository<Movie, Long> {
+public interface MovieRepositoryIF extends CrudRepository<Movie, Integer> {
     Movie findByName(String name);
     List<Movie> findByNameContains(String name);
-    Movie findByRating(long id);
+    List<Movie> findByImdbGreaterThan(double point);
 
 
 }
